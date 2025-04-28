@@ -39,7 +39,7 @@ parser.add_argument(
     "--compactFile",
     help="Compact detector file to use",
     type=str,
-    default="CLICPerformance/Visualisation/CLIC_o3_v06_CED/CLIC_o3_v06_CED.xml",
+    default="ILD/compact/ILD_sl5_v02/ILD_l5_o1_v02.xml",
 )
 
 reco_args = parser.parse_known_args()[0]
