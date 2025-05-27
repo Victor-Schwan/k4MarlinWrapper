@@ -18,6 +18,10 @@
 # limitations under the License.
 #
 
+import sys
+
+sys.path.append("/home/vector/promotion/code/k4MarlinWrapper/k4MarlinWrapper/event_displays/")
+
 from Configurables import EventDataSvc, GeoSvc, MarlinProcessorWrapper
 from Gaudi.Configuration import INFO
 from k4FWCore import ApplicationMgr, IOSvc
