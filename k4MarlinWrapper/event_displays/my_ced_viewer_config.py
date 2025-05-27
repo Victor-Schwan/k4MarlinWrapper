@@ -1,4 +1,5 @@
 cols_display_config_sorted = [
+    # Collection, marker_type, size, toggle group number
     ("VXDCollection", 0, 5, 1),
     ("SITCollection", 0, 5, 1),
     ("FTD_PIXELCollection", 0, 5, 1),
@@ -59,8 +60,8 @@ config = {
     "HelixMaxR": ["2000"],
     "HelixMaxZ": ["2500"],
     "MCParticleEnergyCut": ["0.001"],
-    "ScaleLineThickness": ["1"],
-    "ScaleMarkerSize": ["1"],
+    "ScaleLineThickness": ["3"],
+    "ScaleMarkerSize": ["3"],
     "UseColorForHelixTracks": ["0"],
     "UseTPCForLimitsOfHelix": ["true"],
     "UsingParticleGun": ["false"],
