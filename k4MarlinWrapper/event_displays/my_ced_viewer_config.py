@@ -30,6 +30,7 @@ cols_display_config_sorted = [
     ("TruthTracks", 0, 6, 3),
     ("ForwardTracks", 0, 6, 4),
     ("SiTracks", 0, 6, 5),
+    ("SiTracksCT", 0, 6, 5),
     ("ClupatraTracks", 0, 6, 6),
     ("MarlinTrkTracks", 0, 6, 7),
     ("MCParticle", 0, 3, 0),
