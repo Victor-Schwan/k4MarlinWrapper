@@ -1,3 +1,14 @@
+# v00-14
+
+* 2026-01-16 Thomas Madlener ([PR#472](https://github.com/key4hep/k4MarlinWrapper/pull/472))
+  - Make sure we can still build with EDM4hep 1.0
+
+* 2026-01-10 Juan Miguel Carceller ([PR#471](https://github.com/key4hep/k4MarlinWrapper/pull/471))
+  - Change the name of the test folder to tests to fix failures in the tests due to a clash of `test` python modules
+
+* 2025-11-25 Juan Miguel Carceller ([PR#257](https://github.com/key4hep/k4MarlinWrapper/pull/257))
+  - Fix test after the logging default changed in https://github.com/key4hep/k4FWCore/pull/361
+
 # v00-13
 
 * 2025-11-03 Thomas Madlener ([PR#254](https://github.com/key4hep/k4MarlinWrapper/pull/254))
