@@ -1,6 +1,10 @@
 name: doctest-linux
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -30,10 +34,8 @@ jobs:
         docker exec CI_container /bin/bash -c '/mount.sh
         cd ./Package;
         source ${{ matrix.SETUP }};
-        export LD_LIBRARY_PATH=/Package/install/lib64:$LD_LIBRARY_PATH
-        export PYTHONPATH=/Package/install/python:$PYTHONPATH
+        k4_local_repo
         export K4MARLINWRAPPER=/Package/install/share/k4MarlinWrapper
-        export PATH=/Package/install/bin:$PATH
         unset KEY4HEP_STACK;
         mkdir testdir;
         cat .github/scripts/yamlheader.md  ${{ matrix.PAGE }}.md > testdir/test.md;
