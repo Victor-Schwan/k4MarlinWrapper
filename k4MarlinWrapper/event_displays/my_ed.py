@@ -22,13 +22,19 @@ import sys
 
 sys.path.append("/home/vector/promotion/code/k4MarlinWrapper/k4MarlinWrapper/event_displays/")
 
-from Configurables import EventDataSvc, GeoSvc, MarlinProcessorWrapper
+from Configurables import EventDataSvc, GeoSvc, MarlinProcessorWrapper, CellIDEncodingFiller
 from Gaudi.Configuration import INFO
 from k4FWCore import ApplicationMgr, IOSvc
 from k4FWCore.parseArgs import parser
 from my_ced_viewer_config import config
 
 from k4MarlinWrapper.io_helpers import IOHandlerHelper
+
+
+MISSING_ENCODINGS = {
+    "EcalEndcapsCollectionGapHits": "system:0:5,module:5:3,stave:8:4,tower:12:4,layer:16:6,wafer:22:6,slice:28:4,cellX:32:-16,cellY:48:-16",
+}
+
 
 parser.add_argument(
     "--inputFiles",
@@ -61,11 +67,15 @@ svcList.append(geoSvc)
 io_handler = IOHandlerHelper(algList, iosvc)
 io_handler.add_reader(reco_args.inputFiles)
 
+
+MyFiller = CellIDEncodingFiller("CellIDEncodingFiller")
+MyFiller.CellIDEncodings = MISSING_ENCODINGS
+algList.append(MyFiller)
+
 MyCEDViewer = MarlinProcessorWrapper("MyCEDViewer")
 MyCEDViewer.OutputLevel = INFO
 MyCEDViewer.ProcessorType = "DDCEDViewer"
 MyCEDViewer.Parameters = config
-
 algList.append(MyCEDViewer)
 
 # We need to convert the inputs in case we have EDM4hep input
