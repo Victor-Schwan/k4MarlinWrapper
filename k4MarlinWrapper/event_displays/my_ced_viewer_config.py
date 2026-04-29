@@ -23,6 +23,8 @@ cols_display_config_sorted = [
     ("SiTracksCT"                  ,  0,  6,  5) ,
     ("ClupatraTracks"              ,  0,  6,  6) ,
     ("MarlinTrkTracks"             ,  0,  6,  7) ,
+    ("CandidateMergedTracks"       ,  0,  6,  8) ,
+    ("RefittedMergedTracks"        ,  0,  6,  9) ,
     ("VXDTrackerHits"              ,  0,  5,  11),
     ("SITTrackerHits"              ,  0,  5,  11),
     ("TPCTrackerHits"              ,  0,  5,  11),
