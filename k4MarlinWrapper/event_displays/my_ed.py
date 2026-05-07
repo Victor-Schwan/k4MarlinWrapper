@@ -22,14 +22,12 @@ import sys
 
 sys.path.append("/home/vector/promotion/code/k4MarlinWrapper/k4MarlinWrapper/event_displays/")
 
-from Configurables import EventDataSvc, GeoSvc, MarlinProcessorWrapper, CellIDEncodingFiller
+from Configurables import CellIDEncodingFiller, EventDataSvc, GeoSvc, MarlinProcessorWrapper
 from Gaudi.Configuration import INFO
 from k4FWCore import ApplicationMgr, IOSvc
 from k4FWCore.parseArgs import parser
-from my_ced_viewer_config import config
-
 from k4MarlinWrapper.io_helpers import IOHandlerHelper
-
+from my_ced_viewer_config import config
 
 MISSING_ENCODINGS = {
     "EcalEndcapsCollectionGapHits": "system:0:5,module:5:3,stave:8:4,tower:12:4,layer:16:6,wafer:22:6,slice:28:4,cellX:32:-16,cellY:48:-16",
