@@ -68,7 +68,7 @@ io_handler.add_reader(reco_args.inputFiles)
 
 MyFiller = CellIDEncodingFiller("CellIDEncodingFiller")
 MyFiller.CellIDEncodings = MISSING_ENCODINGS
-algList.append(MyFiller)
+# algList.append(MyFiller)
 
 MyCEDViewer = MarlinProcessorWrapper("MyCEDViewer")
 MyCEDViewer.OutputLevel = INFO
